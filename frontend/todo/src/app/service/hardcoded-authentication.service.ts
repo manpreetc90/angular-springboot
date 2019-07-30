@@ -8,11 +8,18 @@ export class HardcodedAuthenticationService {
 
   constructor() { }
 
-  authenticate(username, password){
+  authenticate(username, password) {
     if (username === 'manpreet' && password === 'admin'){
-     return true;
+      sessionStorage.setItem('authenticatedUser', username);
+      return true;
     } else {
       return false;
     }
+  }
+
+  isUserLoggedIn() {
+    // tslint:disable-next-line: prefer-const
+    let user = sessionStorage.getItem('authenticatedUser');
+    return !(user === null);
   }
 }

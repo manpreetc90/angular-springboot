@@ -25,11 +25,6 @@ export class LoginComponent implements OnInit {
 
   }
 
-  isUserLoggedIn(){
-    // tslint:disable-next-line: prefer-const
-    let user = sessionStorage.getItem('authenticatedUser');
-    return !(user === null);
-  }
   constructor(private router: Router,
               private hardcodedAuthenticationService : HardcodedAuthenticationService) { }
 
