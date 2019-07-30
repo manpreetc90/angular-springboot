@@ -9,11 +9,11 @@ import { HardcodedAuthenticationService } from '../service/hardcoded-authenticat
 export class MenuComponent implements OnInit {
 
   // tslint:disable-next-line: no-inferrable-types
-  isUserLoggedIn: boolean = false;
+  //isUserLoggedIn: boolean = false;
   constructor(private hardcodedAuthenticationService: HardcodedAuthenticationService) { }
 
   ngOnInit() {
-    this.isUserLoggedIn = this.hardcodedAuthenticationService.isUserLoggedIn();
+    //this.isUserLoggedIn = this.hardcodedAuthenticationService.isUserLoggedIn();
   }
 
 }
